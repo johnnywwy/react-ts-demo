@@ -1,6 +1,9 @@
 // import { useState } from 'react'
 // import StateDemo from './test/stateDemo'
-import { List1 } from './test/list'
+// import { List1 } from './test/list'
+// import UseRefDemo from './test/useRefDemo'
+
+import UseMemoDemo from './test/useMemoDemo'
 function App() {
   // const [count, setCount] = useState(0)
 
@@ -12,7 +15,10 @@ function App() {
 
   return (
     <>
-      <List1 />
+      {/* <List1 /> */}
+      {/* <StateDemo /> */}
+      {/* <UseRefDemo /> */}
+      <UseMemoDemo />
       {/* <StateDemo /> */}
       {/* <div>
         <button onClick={add}>{count}</button>

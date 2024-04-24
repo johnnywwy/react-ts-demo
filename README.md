@@ -215,4 +215,23 @@ git commit -m 'chore: commit lint'
 
 - 这是React 18开始，useEffect在开发环境下会执行两次
 
-- 模拟组件创、销毁再创建的完成流程，及早暴露问题
+- 模拟组件创建、销毁再创建的完成流程，及早暴露问题
+- 生产环境只会执行一次
+
+## 8、useRef 是干嘛的
+
+1. 操作dom的
+2. 可以传入普通js变量，但是不会触发 rerender
+
+## 9、useMemo 缓存函数
+
+```
+  const [num1, setNum1] = useState(10)
+  const [num2, setNum2] = useState(20)  
+
+const sum = useMemo(() => {
+    return num1 + num2
+  }, [num1, num2])
+
+```
+
