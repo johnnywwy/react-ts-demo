@@ -3,8 +3,12 @@
 // import { List1 } from './test/list'
 // import UseRefDemo from './test/useRefDemo'
 
-import UseMemoDemo from './test/useMemoDemo'
+// import UseMemoDemo from './test/useMemoDemo'
+// import UseCallBackDemo from './test/useCallBackDemo'
+
+import { useMouseHooks } from './hooks/useMouseHooks'
 function App() {
+  const { x, y } = useMouseHooks()
   // const [count, setCount] = useState(0)
 
   // // const a = 100
@@ -15,10 +19,14 @@ function App() {
 
   return (
     <>
+      <p>
+        鼠标坐标： X: {x} Y:{y}
+      </p>
       {/* <List1 /> */}
       {/* <StateDemo /> */}
       {/* <UseRefDemo /> */}
-      <UseMemoDemo />
+      {/* <UseMemoDemo /> */}
+      {/* <UseCallBackDemo /> */}
       {/* <StateDemo /> */}
       {/* <div>
         <button onClick={add}>{count}</button>
