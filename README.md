@@ -201,3 +201,18 @@ git commit -m 'chore: commit lint'
 ###  
 
 ## 6、加餐 `vite` 和 `webpack`的区别
+
+1. webpack 是一个流行的前端打包工模具
+2. create-react-app 内部使用webpack 进行打包
+3. vite 即是构建工具，又是打包工具
+
+- vite 比 CRA 打包项目更快
+- Vite 使用了 ES Module 的语法（仅开发环境）
+
+
+
+## 7、useEffect执行两次的原因
+
+- 这是React 18开始，useEffect在开发环境下会执行两次
+
+- 模拟组件创、销毁再创建的完成流程，及早暴露问题
