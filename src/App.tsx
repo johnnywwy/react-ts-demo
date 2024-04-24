@@ -7,8 +7,11 @@
 // import UseCallBackDemo from './test/useCallBackDemo'
 
 import { useMouseHooks } from './hooks/useMouseHooks'
+import { useAsyncGetInfo } from './hooks/useAsyncGetInfo'
+
 function App() {
   const { x, y } = useMouseHooks()
+  const { time, loading, data } = useAsyncGetInfo()
   // const [count, setCount] = useState(0)
 
   // // const a = 100
@@ -22,6 +25,8 @@ function App() {
       <p>
         鼠标坐标： X: {x} Y:{y}
       </p>
+      <p>时间：{time}</p>
+      <p>{loading ? '加载中...' : data}</p>
       {/* <List1 /> */}
       {/* <StateDemo /> */}
       {/* <UseRefDemo /> */}
