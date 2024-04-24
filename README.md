@@ -89,9 +89,9 @@ ttier --save-dev
 
 
 
-在根目录新建 `.prettierrc.cjs`
+在根目录新建 `.prettierrc.cjs` 下面是我的个人喜欢的配置
 
-```
+```js
 module.exports = {
   // 在箭头函数的参数周围是否加上括号，此处设置为避免加括号
   arrowParens: 'avoid',
@@ -139,7 +139,65 @@ module.exports = {
 {
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": "explicit"
-    }
+    } 
 }
 ```
 
+---
+
+## 4、引入 husky
+
+```bash
+pnpm add --save-dev husky
+```
+
+```bash
+pnpm exec husky init
+```
+
+
+
+`pre-commit`
+
+```bash
+#!/user/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+pnpm run lint
+pnpm run format
+git add .
+```
+
+
+
+## 5、引入 ` commit lint`
+
+```
+pnpm add --save-dev @commitlint/{cli,config-conventional}
+echo "export default { extends: ['@commitlint/config-conventional'] };" > commitlint.config.js
+
+```
+
+规范提交方式
+
+```bash
+git commit -m 'chore: commit lint' 
+```
+
+```json
+# build: 用于构建系统或者外部依赖的修改。
+# chore: 与构建过程或者辅助工具和库相关的修改。
+# ci: 与持续集成（Continuous Integration）系统相关的修改。
+# docs: 文档相关的修改。
+# feat: 添加新功能或者新特性。
+# fix: 修复bug。
+# perf: 改进性能的代码修改。
+# refactor: 代码重构，不涉及新功能或者修复bug。
+# revert: 撤销之前的提交。
+# style: 代码样式、格式、空格等方面的修改，不涉及代码含义的修改。
+# test: 添加或修改测试相关的代码。
+```
+
+###  
+
+## 6、加餐 `vite` 和 `webpack`的区别
