@@ -8,10 +8,11 @@
     "build": "tsc && vite build",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "preview": "vite preview",
-    "format": "prettier --write src/**/*.{js,jsx,ts,tsx}",
+    "format": "prettier --write ./*.{js,jsx,ts,tsx} src/**/*.{js,jsx,ts,tsx}",
     "prepare": "husky"
   },
   "dependencies": {
+    "@ant-design/icons": "5.3.6",
     "antd": "5.16.4",
     "eslint-plugin-react": "7.34.1",
     "normalize.css": "8.0.1",
@@ -40,6 +41,7 @@
     "sass-loader": "14.2.1",
     "typescript": "^5.2.2",
     "typescript-eslint": "7.7.0",
+    "unocss": "0.59.4",
     "unplugin-auto-import": "0.17.5",
     "vite": "^5.2.0"
   },

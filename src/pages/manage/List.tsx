@@ -22,16 +22,6 @@ const QuestionCrad: FC<PropsType> = props => {
     props.deleteQuestion && props.deleteQuestion(id)
   }
 
-  // useEffect(() => {
-  //   console.log('list card mounted!!')
-
-  //   return () => {
-  //     console.log('list card unmounted~~~')
-  //   }
-
-  //   // 生命周期: 创建 更新（state 变化）, 销毁
-  // }, [])
-
   return (
     <div className="list-name">
       <strong>{name}</strong> &nbsp;
@@ -79,15 +69,7 @@ export const List: FC = () => {
     }
   }, [])
 
-  // useEffect(() => {
-  //   console.log('list 变化了')
-  // }, [list])
-
-  // console.log('加载网络请求')
-
   const deleteQuestion = (id: number) => {
-    // console.log('父组件收到了啊啊啊', id)
-
     setList(list.filter(item => item.id !== id))
   }
 
