@@ -1,0 +1,9 @@
+import React, { FC } from 'react'
+
+export const Star: FC = () => {
+  return (
+    <div>
+      <h1>Star</h1>
+    </div>
+  )
+}

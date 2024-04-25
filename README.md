@@ -1,6 +1,8 @@
 # React + TypeScript + Vite
 
-## 1、使用 vite 构建项目
+## 第一节
+
+### 1、使用 vite 构建项目
 
 ```js
 
@@ -8,7 +10,7 @@
 
 ---
 
-## 2、引入代码规范eslint
+### 2、引入代码规范eslint
 
 ```bash
 npx eslint --init
@@ -69,7 +71,7 @@ module.exports = {
 
 ---
 
-## 3、安装prettier
+### 3、安装prettier
 
 ```bash
 pnpm install prettier eslint-config-prettier eslint-plugin-pre
@@ -145,7 +147,7 @@ module.exports = {
 
 ---
 
-## 4、引入 husky
+### 4、引入 husky
 
 ```bash
 pnpm add --save-dev husky
@@ -170,7 +172,7 @@ git add .
 
 
 
-## 5、引入 ` commit lint`
+### 5、引入 ` commit lint`
 
 ```
 pnpm add --save-dev @commitlint/{cli,config-conventional}
@@ -200,7 +202,7 @@ git commit -m 'chore: commit lint'
 
 ###  
 
-## 6、加餐 `vite` 和 `webpack`的区别
+### 6、加餐 `vite` 和 `webpack`的区别
 
 1. webpack 是一个流行的前端打包工模具
 2. create-react-app 内部使用webpack 进行打包
@@ -211,23 +213,23 @@ git commit -m 'chore: commit lint'
 
 
 
-## 7、useEffect执行两次的原因
+### 7、useEffect执行两次的原因
 
 - 这是React 18开始，useEffect在开发环境下会执行两次
 
 - 模拟组件创建、销毁再创建的完成流程，及早暴露问题
 - 生产环境只会执行一次
 
-## 8、useRef 是干嘛的
+### 8、useRef 是干嘛的
 
 1. 操作dom的
 2. 可以传入普通js变量，但是不会触发 rerender
 
-## 9、useMemo 缓存函数
+### 9、useMemo 缓存数据
 
-```
-  const [num1, setNum1] = useState(10)
-  const [num2, setNum2] = useState(20)  
+```tsx
+const [num1, setNum1] = useState(10)
+const [num2, setNum2] = useState(20)  
 
 const sum = useMemo(() => {
     return num1 + num2
@@ -235,3 +237,16 @@ const sum = useMemo(() => {
 
 ```
 
+### 10、useCallback 缓存函数
+
+
+
+
+
+### 11、闭包问题
+
+
+
+## 第二节
+
+## react 使用 css
