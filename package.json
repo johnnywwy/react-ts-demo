@@ -12,6 +12,7 @@
     "prepare": "husky"
   },
   "dependencies": {
+    "antd": "5.16.4",
     "eslint-plugin-react": "7.34.1",
     "normalize.css": "8.0.1",
     "react": "^18.2.0",
