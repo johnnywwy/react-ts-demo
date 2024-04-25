@@ -1,5 +1,7 @@
 import React, { FC, useEffect, useState } from 'react'
 
+import { useSearchParams } from 'react-router-dom'
+
 import './list.css'
 type PropsType = {
   id: number
@@ -42,7 +44,10 @@ const QuestionCrad: FC<PropsType> = props => {
   )
 }
 
-export const List1: FC = () => {
+export const List: FC = () => {
+  const [searchParams] = useSearchParams()
+  console.log('keyword', searchParams.get('keyword'))
+
   const [list, setList] = useState([
     {
       id: 1,
