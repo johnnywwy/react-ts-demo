@@ -14,12 +14,13 @@ export const MainLayout: FC = () => {
         <Logo />
         <UserInfo />
       </Header>
-      <Content className="bg-blue-100 overflow-auto h-[100px]">
+      <Content>
         <Outlet />
       </Content>
 
-      <Footer className="min-h-[64px] text-white p-0 flex justify-center items-center bg-gray-400 text-center">
+      <Footer className="min-h-[64px] flex justify-center items-center bg-gray-200">
         小牧问卷 &copy; 2023 -present. Create by johnnywwy
+        {/* <Link>johnnywwy</Link> */}
       </Footer>
     </Layout>
   )
