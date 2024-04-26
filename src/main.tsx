@@ -1,9 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import 'antd/dist/reset.css'
 
-import 'normalize.css/normalize.css' // 重置浏览器样式
 import 'virtual:uno.css'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

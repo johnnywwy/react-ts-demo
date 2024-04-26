@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@ant-design/icons": "5.3.6",
+    "@unocss/reset": "0.59.4",
     "antd": "5.16.4",
     "eslint-plugin-react": "7.34.1",
     "normalize.css": "8.0.1",
